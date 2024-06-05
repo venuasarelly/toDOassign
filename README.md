@@ -12,28 +12,33 @@ Implemented APIs:
 Create Task API:
 
 **Endpoint: POST /tasks/add**
+
 Description: Allows users to create a new task by sending a POST request to the /tasks/add endpoint with a JSON payload containing the title and description of the task.
 Validation: Checks if the title is empty and returns a 400 Bad Request error if so.
 Response: Returns the newly created task with a 201 Created status.
 Get All Tasks API:
 
 **Endpoint: GET /tasks/all**
+
 Description: Retrieves a list of all tasks stored in the database by sending a GET request to the /tasks/all endpoint.
 Response: Returns an array of tasks as JSON.
 Mark Task as Completed API:
 
 **Endpoint: PUT /tasks/complete**
+
 Description: Allows users to mark a task as completed by sending a PUT request to the /tasks/complete endpoint with the task ID provided as a query parameter.
 Validation: Checks if the task is already marked as completed and returns a 400 Bad Request error if so.
 Response: Returns the updated task details.
 Edit Task API:
 
 **Endpoint: PUT /tasks/edit/:id**
+
 Description: Allows users to edit the details of a task by sending a PUT request to the /tasks/edit/:id endpoint with the task ID provided as a URL parameter and a JSON payload containing the updated title and description.
 Validation: Checks if the title is empty and returns a 400 Bad Request error if so.
 Response: Returns the updated task details.
 Delete Task API:
 
 **Endpoint: DELETE /tasks/:id**
+
 Description: Allows users to delete a task by sending a DELETE request to the /tasks/:id endpoint with the task ID provided as a URL parameter.
 Response: Returns a message confirming the deletion of the task.
